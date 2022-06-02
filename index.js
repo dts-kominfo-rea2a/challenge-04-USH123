@@ -8,7 +8,23 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = function (tanggal, index) {
+  //membuat array baru untuk menampung hasil konversi tanggal
+  const arrTanggal = [];
+  for (let i = 0; i < tanggal.length; i++) {
+    //Mengubah tanggal dalam epoch time dalam satuan detik
+    arrTanggal[i] = Date.parse(tanggal[i]) / 1000;
+  }
+
+  //kalau tidak ada input index, maka semua hasil konversi akan dijoin
+  if (isNaN(index)) {
+    return arrTanggal.join(`-`);
+  }
+  // kalau ada input index, maka dikeluarkan hasil konversi untuk posisi array yang dituju
+  else {
+    return arrTanggal[index];
+  }
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
