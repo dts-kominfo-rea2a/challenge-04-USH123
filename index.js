@@ -18,7 +18,8 @@ const createDate = function (tanggal, index) {
 
   //kalau tidak ada input index, maka semua hasil konversi akan dijoin
   if (isNaN(index)) {
-    return arrTanggal.join(`-`);
+    let sortedArrTanggal = arrTanggal.sort();
+    return sortedArrTanggal.join(`-`);
   }
   // kalau ada input index, maka dikeluarkan hasil konversi untuk posisi array yang dituju
   else {
