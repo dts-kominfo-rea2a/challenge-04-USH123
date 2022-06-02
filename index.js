@@ -22,7 +22,7 @@ const createDate = function (tanggal, index) {
   }
   // kalau ada input index, maka dikeluarkan hasil konversi untuk posisi array yang dituju
   else {
-    return arrTanggal[index];
+    return arrTanggal[index].toString();
   }
 };
 
